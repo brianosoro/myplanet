@@ -1,0 +1,67 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.course.CourseStepFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="right">
+
+            <Button
+                android:id="@+id/btn_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Open Resource"
+                android:theme="@style/AccentButton"/>
+
+            <Button
+                android:id="@+id/btn_resources"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Download Resources"
+                android:theme="@style/AccentButton" />
+
+            <Button
+                android:id="@+id/btn_take_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Take Test"
+                android:theme="@style/PrimaryButton"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_normal"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="bold" />
+
+            <br.tiagohm.markdownview.MarkdownView
+                android:layout_width="match_parent"
+                android:id="@+id/description"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

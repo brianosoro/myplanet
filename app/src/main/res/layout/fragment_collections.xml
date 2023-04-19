@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.library.CollectionsFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_filter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_normal">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_filter"
+                    android:hint="@string/filter_collections" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_many"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:checked="true"
+                android:visibility="gone"
+                android:padding="@dimen/padding_normal"
+                android:text="@string/select_many_collections" />
+
+        </LinearLayout>
+
+        <ExpandableListView
+            android:layout_width="match_parent"
+            android:id="@+id/list_tags"
+            android:layout_height="0dp"
+            android:padding="@dimen/padding_normal"
+            android:layout_weight="1" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_gravity="right"
+            android:theme="@style/PrimaryButton"
+            android:text="@string/ok"
+            android:id="@+id/btn_ok"
+            android:minWidth="100dp"
+            android:visibility="gone"
+            android:layout_margin="@dimen/padding_large"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>
