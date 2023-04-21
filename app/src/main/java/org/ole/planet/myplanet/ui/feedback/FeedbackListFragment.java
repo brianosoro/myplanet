@@ -50,6 +50,7 @@ public class FeedbackListFragment extends Fragment {
         userModel = new UserProfileDbHandler(getActivity()).getUserModel();
         v.findViewById(R.id.fab).setOnClickListener(vi -> new FeedbackFragment().show(getChildFragmentManager(), ""));
         return v;
+
     }
 
     @Override
